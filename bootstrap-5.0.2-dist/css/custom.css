@@ -1,0 +1,232 @@
+:root {
+  --brand-green: #075234;
+  --brand-soft: #77c4ad;
+  --brand-ink: #2f6b58;
+  --brand-paper: #fbfbf8;
+}
+
+body {
+  margin: 0;
+  background: var(--brand-paper);
+  color: #33453d;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  letter-spacing: 0;
+}
+
+.hero-carousel .carousel-item {
+  height: min(52vw, 560px);
+  min-height: 320px;
+  background: #d9d8ca;
+}
+
+.hero-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.9) contrast(.96);
+}
+
+.hero-carousel .banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+}
+
+.main-menu {
+  background: var(--brand-green);
+  padding: 2.6rem 0;
+}
+
+.main-menu .nav {
+  gap: clamp(1rem, 6vw, 5.5rem);
+}
+
+.menu-link,
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(140px, 16vw, 230px);
+  min-height: 84px;
+  background: #fff;
+  color: var(--brand-ink);
+  text-decoration: none;
+  font-size: clamp(1.55rem, 2.7vw, 2.4rem);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, .15);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.menu-link:hover,
+.shop-btn:hover {
+  color: var(--brand-green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .16);
+}
+
+.brand-story {
+  padding: clamp(4rem, 7vw, 6.5rem) 0 3.5rem;
+}
+
+.season-bar {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.25;
+  text-align: center;
+  padding: .7rem 1rem;
+  margin-bottom: clamp(2.3rem, 4vw, 3.3rem);
+}
+
+.story-img {
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-copy {
+  background: #fff;
+  padding: clamp(1.7rem, 4vw, 3.2rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 8px solid var(--brand-soft);
+}
+
+.story-copy h1 {
+  color: var(--brand-ink);
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.story-copy p {
+  font-size: 1.08rem;
+  line-height: 2;
+  margin: 0;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+}
+
+.collection {
+  padding: 1rem 0 4.5rem;
+}
+
+.product-card {
+  border: 1px solid #b8b8b8;
+  border-radius: 0;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  box-shadow: none;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 1rem 1.1rem 1.2rem;
+  min-height: 132px;
+}
+
+.product-card .card-title {
+  color: var(--brand-ink);
+  font-size: 1.35rem;
+  margin-bottom: .45rem;
+}
+
+.product-card .card-text {
+  color: #5c6f67;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.shop-area {
+  text-align: center;
+  padding: .6rem 0 4.2rem;
+}
+
+.shop-btn {
+  min-width: 220px;
+  min-height: 82px;
+  border: 0;
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+}
+
+.site-footer {
+  background: var(--brand-green);
+  color: rgba(255, 255, 255, .86);
+  padding: 4rem 0 2rem;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+}
+
+.footer-brand {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, .84);
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: .5rem;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  text-align: center;
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .72);
+}
+
+@media (max-width: 767.98px) {
+  .hero-carousel .carousel-item {
+    height: 360px;
+  }
+
+  .main-menu {
+    padding: 1.6rem 0;
+  }
+
+  .main-menu .nav {
+    gap: .85rem;
+  }
+
+  .menu-link {
+    min-width: calc(50vw - 2rem);
+    min-height: 64px;
+    font-size: 1.45rem;
+  }
+
+  .story-img {
+    min-height: 300px;
+  }
+
+  .story-copy {
+    border-left: 0;
+    border-top: 8px solid var(--brand-soft);
+  }
+}
