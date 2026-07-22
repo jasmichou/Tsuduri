@@ -7,6 +7,24 @@
   <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-5.0.2-dist/css/header.css" rel="stylesheet">
   <link href="bootstrap-5.0.2-dist/css/custom.css" rel="stylesheet">
+  <style>
+    .add-to-cart-btn {
+      width: 100%;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      background-color: #2f4f4f;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #3a5a5a;
+    }
+  </style>
   <!-- 以下為Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6X62NQW9WS"></script>
   <script>
@@ -120,6 +138,7 @@
               <div class="card-body">
                 <h2 class="card-title">白色排釦棉麻洋裝</h2>
                 <p class="card-text">寬鬆短袖、自然腰褶與木質排釦，呈現安靜柔和的田園感。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
             </article>
           </div>
@@ -129,6 +148,7 @@
               <div class="card-body">
                 <h2 class="card-title">深藍花卉襯衫洋裝</h2>
                 <p class="card-text">白色翻領與細腰帶搭配大面積花卉印花，俐落中帶復古氣息。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
             </article>
           </div>
@@ -138,6 +158,7 @@
               <div class="card-body">
                 <h2 class="card-title">黑色碎花草帽洋裝</h2>
                 <p class="card-text">深色底布襯托細緻花朵，搭配草帽造型，適合夏日旅行穿搭。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
             </article>
           </div>
@@ -147,6 +168,7 @@
               <div class="card-body">
                 <h2 class="card-title">灰紫亞麻束腰洋裝</h2>
                 <p class="card-text">V 領排釦、抽繩腰身與微皺亞麻質地，保留自在鬆弛的輪廓。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
             </article>
           </div>
@@ -156,6 +178,7 @@
               <div class="card-body">
                 <h2 class="card-title">暖白蓬袖綁帶洋裝</h2>
                 <p class="card-text">柔亮米白色調、蓬袖與頸間綁帶，營造輕盈浪漫的春夏光感。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
             </article>
           </div>
@@ -165,10 +188,8 @@
               <div class="card-body">
                 <h2 class="card-title">淺藍印花收腰洋裝</h2>
                 <p class="card-text">清爽藍色印花、荷葉短袖與鬆緊收腰，日常出門輕便好搭。</p>
+                <button class="add-to-cart-btn" type="button" onclick="alert('已將商品加入購物車')">加入購物車</button>
               </div>
-              <section id="shop" class="shop-area">
-      <a class="shop-btn" href="#">Shop Now</a>
-    </section>
             </article>
           </div>
         </div>
@@ -205,6 +226,21 @@
   </footer>
 
   <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.product-card').forEach(function (card) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'add-to-cart-btn';
+        button.textContent = '加入購物車';
+        button.addEventListener('click', function (event) {
+          event.stopPropagation();
+          alert('已將商品加入購物車');
+        });
+        card.appendChild(button);
+      });
+    });
+  </script>
 </body>
 </html>
 
