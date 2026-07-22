@@ -16,6 +16,15 @@
 
     gtag('config', 'G-6X62NQW9WS');
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6X62NQW9WS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6X62NQW9WS');
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -33,12 +42,25 @@
       <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
+    <!-- 購物車圖示與數量氣球（通常放在網頁右上角） -->
+    <div class="cart-icon-container">
+      <div class="cart-icon">
+        🛒
+        <span class="cart-badge" id="cartBadge">0</span>
+      </div>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="banner-img" src="./bootstrap-5.0.2-dist/image/banner.png" alt="Tsuduri 春夏系列橫幅">
+        <!-- 加入購物車按鈕 -->
+      <button class="add-to-cart-btn" id="addToCartBtn">
+      <span class="btn-text">加入購物車</span>
+      <span class="btn-spinner"></span>
+      <span class="btn-success-icon">✓ 已加入</span>
+    </button>
       </div>
       <div class="carousel-item">
-        <img src="bootstrap-5.0.2-dist/image/rotate/istockphoto-1297834430-2048x2048.jpg" alt="戴帽子的花洋裝女子站在花田中">
+        <img src="bootstrap-5.0.2-dist/image/rotate/istockphoto-1297834430-2048x2048.jpg" alt="!!戴帽子的花洋裝女子站在花田中">
       </div>
       <div class="carousel-item">
         <img src="bootstrap-5.0.2-dist/image/rotate/istockphoto-1320218155-2048x2048.jpg" alt="春夏服飾輪播形象照">
@@ -144,6 +166,9 @@
                 <h2 class="card-title">淺藍印花收腰洋裝</h2>
                 <p class="card-text">清爽藍色印花、荷葉短袖與鬆緊收腰，日常出門輕便好搭。</p>
               </div>
+              <section id="shop" class="shop-area">
+      <a class="shop-btn" href="#">Shop Now</a>
+    </section>
             </article>
           </div>
         </div>
