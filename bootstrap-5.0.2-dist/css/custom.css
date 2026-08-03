@@ -180,17 +180,36 @@ body {
   margin-bottom: 1rem;
 }
 
-.footer-link {
-  color: rgba(255, 255, 255, .84);
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: .5rem;
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .2rem;
 }
 
-.footer-link:hover {
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
   color: #fff;
-  text-decoration: underline;
+  border: 1px solid rgba(255, 255, 255, .18);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.social-btn:hover {
+  background: #fff;
+  color: var(--brand-green);
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 .copyright {
